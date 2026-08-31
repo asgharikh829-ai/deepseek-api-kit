@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: deepseek-api-kit
+    runtime: docker
+    plan: free
+    healthCheckPath: /v1/models
+    envVars:
+      - key: DEEPSEEK_API_KEY
+        sync: false
